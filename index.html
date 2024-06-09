@@ -18,13 +18,17 @@
             justify-content: center;
             align-items: center;
             height: 100%;
-            margin: 0;
+            margin: 40 ;
             text-align: center;
             font-family: Arial, sans-serif;
         }
 
-
-         /* Style for the box */
+        #images img {
+            max-width: 100%; 
+            width: 300px; 
+            height: auto; 
+        }
+         
          #prediction{
             background-color: #bc00d8; 
             color:aliceblue;
@@ -54,7 +58,7 @@
      <div id="audio-emoji" onclick="toggleAudio()">🔊</div>
 
         <audio id="background-audio" loop autoplay>
-         <source src="C:\Users\aksha\OneDrive\Desktop\duckymoomooshoroscope\pixel-playground-color-parade-main-version-25382-01-43.mp3" type="audio/mpeg">
+         <source src="pixel-playground-color-parade-main-version-25382-01-43.mp3" type="audio/mpeg">
          Your browser does not support the audio element.
         </audio>
 
@@ -126,6 +130,8 @@
         }
     }
 </script>  
+
+
     
 </body>
 </html>
