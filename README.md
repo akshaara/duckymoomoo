@@ -1,3 +1,3 @@
 ### Duckymoomoo 
-get your fortunes told!
-you can find the link here: 
+get your daily horoscope by duckymoomoo!
+you can find the link here: https://akshaara.github.io/duckymoomoo
