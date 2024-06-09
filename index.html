@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Duckymoomoo</title>
+
+    <style>
+        html {
+            background-color: blanchedalmond;
+            height: 100%;
+            margin: 40;
+        } 
+
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            margin: 0;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+    </style>
+
+</head>
+<body>
+    <div id="container"> 
+        <p>Duckymoomoo's prediction
+             <i>for <span id="datetime"> </span> </i>
+        </p>
+    </div>
+
+    <div id="images">
+        <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZHNmMXRnZnJseTI3cWYxc3diNWJvbHpqd3VjNmh6ZDRuOTNkNDRmaCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/oebD5alsVBFKg/giphy.gif">
+    </div>
+
+    <div id="prediction">
+        <h2>⋆｡𖦹°⭒˚｡⋆ </h2>
+        <p id="horoscope-text"></p>
+    </div>
+
+    <script>
+        // Array of absurd horoscope readings
+        const horoscopes = [
+            "Tummy might hurt.",
+            "Two wontons shall be ate.",
+            "You will start to hate matcha soon.",
+            "You will dream of Mario coins.",
+            "You will eat some yummy icecream with your friends.",
+            "You will join a mariachi band.",
+            "No raincoat but it is raining.",
+            "You will forgive a stranger that quarelled with you on twitter.",
+            "Get yo hair done and nails done.",
+            "Sleep a little, sleep a lot.",
+
+        ];
+
+        function getRandomHoroscope() {
+            const randomIndex = Math.floor(Math.random() * horoscopes.length);
+            return horoscopes[randomIndex];
+        }
+
+        function displayHoroscope() {
+            const horoscopeTextElement = document.getElementById('horoscope-text');
+            horoscopeTextElement.textContent = getRandomHoroscope();
+        }
+
+        displayHoroscope();
+    </script>  
+
+    <script>
+        // Function to update date and time
+        function updateDateTime() {
+            const now = new Date(); // Get the current date and time
+            const datetimeElement = document.getElementById('datetime'); // Get the element where the date and time will be displayed
+            datetimeElement.textContent = now.toLocaleString(); // Set the element's text content to the current date and time
+        }
+
+        // Call the updateDateTime function every second
+        setInterval(updateDateTime, 1000);
+
+        // Initial call to set the date and time immediately when the page loads
+        updateDateTime();
+    </script>
+    
+</body>
+</html>
+
