@@ -7,9 +7,9 @@
 
     <style>
         html {
-            background-color: blanchedalmond;
+            background-color: rgb(229, 205, 255);
             height: 100%;
-            margin: 40;
+            margin: 100;
         } 
 
         body {
@@ -22,6 +22,24 @@
             text-align: center;
             font-family: Arial, sans-serif;
         }
+
+
+         /* Style for the box */
+         #prediction{
+            background-color: #bc00d8; 
+            color:aliceblue;
+
+            border-radius: 1rem; 
+            border-style: dotted;
+            border-width: 0.25rem ;
+
+            padding: 1rem; 
+            padding-left: 5rem;
+            padding-right: 5rem;
+            padding-bottom: 2rem;
+            
+        }
+
     </style>
 
 </head>
@@ -31,6 +49,14 @@
              <i>for <span id="datetime"> </span> </i>
         </p>
     </div>
+
+     
+     <div id="audio-emoji" onclick="toggleAudio()">🔊</div>
+
+        <audio id="background-audio" loop autoplay>
+         <source src="C:\Users\aksha\OneDrive\Desktop\duckymoomooshoroscope\pixel-playground-color-parade-main-version-25382-01-43.mp3" type="audio/mpeg">
+         Your browser does not support the audio element.
+        </audio>
 
     <div id="images">
         <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZHNmMXRnZnJseTI3cWYxc3diNWJvbHpqd3VjNmh6ZDRuOTNkNDRmaCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/oebD5alsVBFKg/giphy.gif">
@@ -84,6 +110,22 @@
         // Initial call to set the date and time immediately when the page loads
         updateDateTime();
     </script>
+
+<script>
+    // Audio element
+    var audio = document.getElementById("background-audio");
+
+    // Function to toggle audio playback
+    function toggleAudio() {
+        if (audio.paused) {
+            audio.play();
+            document.getElementById("audio-emoji").textContent = "🔊"; // Sound on emoji
+        } else {
+            audio.pause();
+            document.getElementById("audio-emoji").textContent = "🔇"; // Sound off emoji
+        }
+    }
+</script>  
     
 </body>
 </html>
